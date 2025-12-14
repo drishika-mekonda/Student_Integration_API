@@ -1,0 +1,48 @@
+<div class="students-container">
+  <h2>Students</h2>
+
+  <div class="form-row">
+    <input
+      placeholder="Name"
+      [ngModel]="student().name"
+      (ngModelChange)="setName($event)"
+    />
+
+    <input
+      placeholder="Class"
+      [ngModel]="student().class"
+      (ngModelChange)="setClass($event)"
+    />
+
+    <input
+      placeholder="Section"
+      [ngModel]="student().section"
+      (ngModelChange)="setSection($event)"
+    />
+
+    <button type="button" (click)="save()">Save</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Class</th>
+        <th>Section</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let s of students()">
+        <td>{{ s.name }}</td>
+        <td>{{ s.class }}</td>
+        <td>{{ s.section }}</td>
+        <td>
+          <button (click)="edit(s)">Edit</button>
+          <button (click)="delete(s.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

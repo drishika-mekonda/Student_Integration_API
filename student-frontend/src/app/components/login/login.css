@@ -1,0 +1,73 @@
+/* Page Centering */
+.card {
+  width: 360px;
+  margin: 80px auto;
+  padding: 30px 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Heading */
+.card h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Error Message */
+.error {
+  color: #f44336;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+/* Inputs */
+.card input {
+  width: 100%;
+  padding: 11px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Input Focus */
+.card input:focus {
+  outline: none;
+  border-color: #1976d2;
+}
+
+/* Login Button */
+.card button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 11px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #1565c0;
+}
+
+/* Register Link */
+.card p {
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.card a {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
