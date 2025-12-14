@@ -1,0 +1,38 @@
+<div class="students-container">
+  <h2>Students</h2>
+
+  <div class="form-row">
+    <input placeholder="Name" [(ngModel)]="student.name">
+    <input placeholder="Class" [(ngModel)]="student.class">
+    <input placeholder="Section" [(ngModel)]="student.section">
+
+    <button type="button" (click)="save()">
+      Save
+    </button>
+  </div>
+
+  <hr>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Class</th>
+        <th>Section</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let s of students">
+        <td>{{ s.name }}</td>
+        <td>{{ s.class }}</td>
+        <td>{{ s.section }}</td>
+        <td>
+          <button class="edit-btn" type="button" (click)="edit(s)">Edit</button>
+          <button class="delete-btn" type="button" (click)="delete(s.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
